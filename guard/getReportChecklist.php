@@ -15,7 +15,6 @@
   AND guard_visits.visit_time > '2021-01-07 17:01:07' AND guard_visits.visit_time < '2021-01-07 17:02:02'
   ORDER BY sites_table.id");
   
-  //SELECT * FROM guard_visits where ");
 
 $result = $conn->query($sql);
 
@@ -35,10 +34,6 @@ $outp ='{"checklists":['.$outp.']}';
 $conn->close();
 
 echo($outp);
-
-/*while($row = $result->fetch_array(MYSQLI_ASSOC)) {
-    echo $result;
-}*/
 
 
 
