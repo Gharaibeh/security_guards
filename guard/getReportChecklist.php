@@ -11,7 +11,8 @@
  
 
   $sql=("SELECT sites_table.id,sites_table.building_name,sites_table.description,sites_table.location, guard_visits.tag_id, guard_visits.visit_time  
-  FROM sites_table Left JOIN guard_visits on sites_table.id = guard_visits.tag_id
+  FROM sites_table Left JOIN guard_visits on sites_table.id = guard_visits.tag_id 
+  AND guard_visits.visit_time > '2021-01-07 17:01:07' AND guard_visits.visit_time < '2021-01-07 17:02:02'
   ORDER BY sites_table.id");
   
   //SELECT * FROM guard_visits where ");
